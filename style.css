@@ -80,11 +80,12 @@ body{
     width: 50%;
 }
 
-@media(min-width:280px){
+@media screen and (max-width:912px){
     .card{
-        background-position: center -5rem;
+        background-position: top;
         flex-direction: column;
         background-size: 75%;
+        background-image: url(./images/bg-pattern-mobile.svg);
     }
     .img-cont>img{
         display: none;
@@ -95,75 +96,56 @@ body{
    .mobile {
     display: block;
     position: absolute;
-    top: 5%;
+    top: 0%;
     width: 50%;
    }
-   .content {
-    margin-top: 50%;
-   }
 }
-@media(min-width:360px){
-    .mobile {
-        top: 4%;
+@media (min-width:280px) and (max-width:760px){
+    .content {
+        margin-top: 50%;
     }
-    .card {
-        background-position-y: -7rem;
+    .mobile{
+        top: 4.8%;
     }
 }
-@media(min-width:375px){
+
+@media (width:375px){
     .mobile {
         top: 2%;
     }
 }
-@media(min-width:390px){
+
+@media (width:540px){
     .mobile {
-        top: 5%;
+        top: -2%;
     }
 }
-@media(min-width:414px){
+
+@media (width:673px){
     .mobile {
-        top: 4%;
-    }
-    .card {
-        background-position-y: -8rem;
+        top: -5%;
     }
 }
-@media(min-width:540px){
-    .mobile {
-        top: 0%;
-        width: 42%;
-    }
+
+@media (min-width:768px) and (max-width:912px) {
     .card {
-        background-position-y: -10rem;
-    }
-    .content {
-        margin-top: 45%;
-    }
-}
-@media(min-width:768px){
-    .card {
-        background-position-y: -15rem;
         justify-content: center;
     }
     .img-cont {
         height: 20%;
     }
     .content {
-        margin-top: 2%;
+        margin-top: 0%;
     }
 }
-@media(min-width:820px){
-    .card {
-        background-position-y: -16rem;
-    }
-}
-@media(max-width:1024px){
+
+@media (max-width:1024px){
     .img-cont>img{
         bottom: 40%;
     }
 }
 
-@media(min-width:1280px){
+@media (min-width:1280px){
     .img-cont>img{
         bottom: 45%;
     }
