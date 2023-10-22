@@ -46,69 +46,107 @@ body{
     border-radius: 1.5rem;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     z-index: -1;
     background-image: url(./images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-position-x: -27rem;
-    background-position-y: -14rem;
+    background-size: 63%;
+    background-position: -10rem -6rem;
 }
 
 
 .img-cont{
     height: 100%;
     width: 50%;
-    /* background-image: url(./images/bg-pattern-desktop.svg); */
-    z-index: 1;
-    overflow: visible;
-    background-size: 170%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.desktop{
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    background-size: 90%;
+    background-position: -2rem 2rem;
+    background-repeat: no-repeat;
     position: relative;
-    right: 7rem;
-    top: -1.5rem;
-    width: 45%;
 }
 
-.mobile{
+.img-cont>img{
+    position: absolute;
+    bottom: 25%;
+    left: -17%;
+    width: 35%;
+}
+
+.mobile {
     display: none;
-}
-
-img{
-    width: 50%;
 }
 
 .content{
     width: 50%;
 }
 
-@media(max-width:1024px){
-
-    /* .img-cont{
-        background-image: url(./images/bg-pattern-desktop.svg), url(./images/illustration-woman-online-desktop.svg);
-        background-position-x: -25rem, -5rem;
-        background-position-y: -12rem, 2rem;
-        background-size: 200%, 110%;
-    } */
-    
-    .desktop{
-        position: relative;
-        right: 5.5rem;
-        top: 1rem
+@media screen and (max-width:912px){
+    .card{
+        background-position: top;
+        flex-direction: column;
+        background-size: 75%;
+        background-image: url(./images/bg-pattern-mobile.svg);
     }
-
-}
-
-@media(max-width:768px){
-    .desktop{
+    .img-cont>img{
         display: none;
     }
     .img-cont{
-        background-image: url(./images/bg-pattern-mobile.svg), url(./images/illustration-woman-online-mobile.svg);
-        background-repeat: no-repeat;
-        background-position: center;
+        background-image: none;
+    }
+   .mobile {
+    display: block;
+    position: absolute;
+    top: 0%;
+    width: 50%;
+   }
+}
+@media (min-width:280px) and (max-width:760px){
+    .content {
+        margin-top: 50%;
+    }
+    .mobile{
+        top: 4.8%;
+    }
+}
+
+@media (width:375px){
+    .mobile {
+        top: 2%;
+    }
+}
+
+@media (width:540px){
+    .mobile {
+        top: -2%;
+    }
+}
+
+@media (width:673px){
+    .mobile {
+        top: -5%;
+    }
+}
+
+@media (min-width:768px) and (max-width:912px) {
+    .card {
+        justify-content: center;
+    }
+    .img-cont {
+        height: 20%;
+    }
+    .content {
+        margin-top: 0%;
+    }
+}
+
+@media (max-width:1024px){
+    .img-cont>img{
+        bottom: 40%;
+    }
+}
+
+@media (min-width:1280px){
+    .img-cont>img{
+        bottom: 45%;
     }
 }
